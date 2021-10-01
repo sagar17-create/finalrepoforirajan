@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block oneproduct %}
+<div class="card">
+  <div class="card-header">{{ product_data.name }}</div>
+  <div class="card-body">
+    <img src="{{ product_data.image.url }}"  height="200px"  style="object-fit: contain;" class="card-img-top" alt="...">
+    <h5 class="card-title">{{ product_data.price }}</h5>
+    <h5 class="card-title">{{ product_data.quality }}</h5>
+    <p class="card-text">{{ product_data.description }}</p>
+    <a href="#" class="btn btn-primary">BUY</a>
+  </div>
+</div>
+{% endblock oneproduct %}

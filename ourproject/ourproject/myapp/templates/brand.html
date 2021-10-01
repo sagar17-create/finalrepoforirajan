@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+
+{% block displayBrand %}
+<h1>hello i am brand's template</h1>
+{% for i in brand_data %}
+{{ i.brand_name }}: {{ i.brand_moto }}: {{ i.brand_description }}<br>
+{% endfor %}
+{% endblock displayBrand %}

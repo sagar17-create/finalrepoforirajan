@@ -1,0 +1,21 @@
+
+{% extends 'index.html' %}
+
+{% block filter %}
+
+    {% for i in filter_data %}
+
+<div class="card" style="width: 18rem;">
+  <img src="{{ i.image.url }}"  height="200px"  style="object-fit: cover;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ i.name }}</h5>
+    <h5 class="card-title">{{ i.quality }}</h5>
+    <h5 class="card-title">{{ i.price }}</h5>
+    <p class="card-text">{{ i.description }}</p>
+    {% comment %} <a href="{% url 'myapp:product' i.id %}" class="btn btn-primary">BUY</a> {% endcomment %}
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock filter %}
